@@ -57,10 +57,19 @@ console.log(output)
 
 // Soal 6 
 let fibonacci = 15;
-// fibonacci = 16
+fibonacci = 16
 
 let fibList = [0, 1];
 while (fibList.length <= fibonacci) {
     fibList.push(fibList[fibList.length - 1] + fibList[fibList.length - 2]);
 }
 console.log(fibList[fibonacci - 1]);
+
+
+// let i
+// let fib = [0,1]
+
+// for(i = 2; i <= 15; i++){
+//     fib[i] = fib[i - 2] + fib[i - 1]
+//     console.log("fib", fib[i])
+// }
