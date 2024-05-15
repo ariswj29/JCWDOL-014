@@ -5,4 +5,5 @@ Learn Fundamental
 - Day 04 : Array, Function (Declarative Function, Expression Function, Arrow Function)
 - Day 05 : Full of Exercise about Day 01 - Day 04
 - Day 06 : Full of Exercise about Day 01 - Day 04, Prompt and Alert in html
-- Day 07 : Object
+- Day 07 : Object, Destructuring Assignment, Chaining Condition
+- Day 08 : Class Inheritance, ENCAPSULATION, Getter & Setter

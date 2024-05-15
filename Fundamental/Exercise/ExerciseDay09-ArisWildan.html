@@ -1,0 +1,90 @@
+<script>
+class studentPurwadhika{
+    username; 
+    email;
+    #password;
+    phoneNumber;
+
+    constructor(username){
+        this.username = username;
+    }
+
+    get showPassword(){
+        return this.#password
+    }
+
+    set validateEmail(email){
+        if(!email.includes('@')){
+            console.log('Email Not Valid!')
+        }else{
+            this.email = email
+            console.log('Email valid')
+        }
+    }
+
+    set validatePassword(password){
+        if(password.length >= 6 && password.length <= 10){
+            this.#password = password
+            console.log('Password valid')
+        }else{
+            console.log('Password should be more than 6 character and less than 10 character')
+        }
+    }
+}
+
+let input; 
+let allStudent = [];
+console.log(allStudent);
+
+while (true) {
+    input = prompt(`Choose Option: \n 1. Input \n 2. Show Data`);
+    
+    if (input === "1") {
+        const inputUsername = prompt(`Masukan Username`);
+        const inputEmail = prompt(`Masukan Email`);
+        const inputPassword = prompt(`Masukan Password`);
+        const inputPhoneNumber = prompt(`Masukan PhoneNumber`);
+        
+        let student1 = new studentPurwadhika(inputUsername);
+
+        // Validasi email
+        student1.validateEmail = inputEmail; // Ini akan memanggil setter validateEmail
+
+        // Validasi password
+        student1.validatePassword = inputPassword; // Ini akan memanggil setter validatePassword
+
+        // Set phone number
+        student1.phoneNumber = inputPhoneNumber;
+
+        // Cek apakah email dan password valid sebelum menyimpan ke dalam array
+        if (student1.email && student1.showPassword) {
+            allStudent.push(student1);
+            alert(`Data berhasil diinput \n Username: ${student1.username} \n Email: ${student1.email} \n Password: ${student1.showPassword} \n Phone Number: ${student1.phoneNumber} \n`);
+        } else {
+            alert('Data not valid, check again email and password.');
+        }
+    } else if (input === "2") {
+        console.log('all student length', allStudent.length)
+        if (allStudent.length === 0) {
+            alert("Data not found");
+            continue;
+        }else{
+            const loopingStudent = allStudent.map((item, index) => {
+                item.phoneNumber = item.phoneNumber.substring(0, item.phoneNumber.length - 5) + '*****';
+                const result = item === '' ? 'Data not found' : `Data ke-${index + 1} \n Username: ${item.username} \n Email: ${item.email} \n Password: ${item.showPassword} \n Phone Number: ${item.phoneNumber} \n`;
+                return result;
+            });
+            console.log('all student', loopingStudent);
+            alert(loopingStudent);
+        }
+    } else {
+        alert("Pilihan tidak tersedia");
+        continue;
+    }
+
+    const backToMenu = confirm("Back to menu?");
+    if (!backToMenu) break;
+}
+
+console.log(allStudent);
+</script>
