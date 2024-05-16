@@ -1,0 +1,138 @@
+<script>
+    // Inisial kota JKT = Jakarta, CPK = Cikampek, PLM = Palimanan, BTG = Batang, SLO = Solo, NGW = Ngawi, SBY = Surabaya
+    const tarif = {
+        'JKT-CPK': {mobil: 35000, bus: 40000, truk: 50000},
+        'CPK-PLM': {mobil: 90000, bus: 110000, truk: 130000},
+        'PLM-BTG': {mobil: 155000, bus: 160000, truk: 190000},
+        'BTG-SLO': {mobil: 35000, bus: 50000, truk: 55000},
+        'SLO-NGW': {mobil: 55000, bus: 60000, truk: 70000},
+        'NGW-SBY': {mobil: 125000, bus: 150000, truk: 160000}
+    }
+
+    tarif['CPK-JKT'] = {mobil: tarif['JKT-CPK'].mobil, bus: tarif['JKT-CPK'].bus, truk: tarif['JKT-CPK'].truk}
+    tarif['PLM-CPK'] = {mobil: tarif['CPK-PLM'].mobil, bus: tarif['CPK-PLM'].bus, truk: tarif['CPK-PLM'].truk}
+    tarif['BTG-PLM'] = {mobil: tarif['PLM-BTG'].mobil, bus: tarif['PLM-BTG'].bus, truk: tarif['PLM-BTG'].truk}
+    tarif['SLO-BTG'] = {mobil: tarif['BTG-SLO'].mobil, bus: tarif['BTG-SLO'].bus, truk: tarif['BTG-SLO'].truk}
+    tarif['NGW-SLO'] = {mobil: tarif['SLO-NGW'].mobil, bus: tarif['SLO-NGW'].bus, truk: tarif['SLO-NGW'].truk}
+    tarif['SBY-NGW'] = {mobil: tarif['NGW-SBY'].mobil, bus: tarif['NGW-SBY'].bus, truk: tarif['NGW-SBY'].truk}
+    
+    function hitungTarif(masuk, keluar, kendaraan) {
+        
+        const tarifTol = tarif[`${masuk}-${keluar}`];
+        console.log(tarif[`${masuk}-${keluar}`], 'tarif mausk keluar')
+        console.log(tarifTol[kendaraan], 'tarifTol')
+        if (tarifTol) {
+            const tarif = tarifTol.includes(kendaraan) ? tarifTol[kendaraan].toLocaleString('id-ID') : 'Kendaraan tidak ditemukan';
+            console.log(tarifTol[kendaraan], 'tarifTol')
+            console.log(kendaraan, 'kendaraan')
+            console.log(tarif, 'tarif')
+            return `Tarif tol dari ${masuk} ke ${keluar} untuk kendaraan ${kendaraan} adalah Rp.${tarif}`;
+        } else {
+            return "Terjadi kesalahan ketika mengisi"
+        }
+    }
+
+    // const tarifTolMobil = {
+    //     JKT: { JKT: 0,      CPK: 35000,  PLM: 125000, BTG: 280000, SLO: 315000, NGW: 370000, SBY: 495000 },
+    //     CPK: { JKT: 35000,  CPK: 0,      PLM: 90000,  BTG: 245000, SLO: 280000, NGW: 335000, SBY: 460000 },
+    //     PLM: { JKT: 125000, CKP: 90000,  PLM: 0,      BTG: 155000, SLO: 190000, NGW: 245000, SBY: 370000 },
+    //     BTG: { JKT: 280000, CPK: 245000, PLM: 155000, BTG: 0,      SLO: 35000,  NGW: 90000,  SBY: 215000 },
+    //     SLO: { JKT: 315000, CPK: 280000, PLM: 190000, BTG: 35000,  SLO: 0,      NGW: 55000,  SBY: 180000 },
+    //     NGW: { JKT: 370000, CPK: 335000, PLM: 245000, BTG: 90000,  SLO: 55000,  NGW: 0,      SBY: 125000 },
+    //     SBY: { JKT: 495000, CPK: 460000, PLM: 370000, BTG: 215000, SLO: 180000, NGW: 125000, SBY: 0 }
+    // };
+
+    // const tarifTolBus = {
+    //     JKT: { JKT: 0,      CPK: 40000,  PLM: 150000, BTG: 310000, SLO: 360000, NGW: 420000, SBY: 570000 },
+    //     CPK: { JKT: 40000,  CPK: 0,      PLM: 110000, BTG: 270000, SLO: 320000, NGW: 380000, SBY: 530000 },
+    //     PLM: { JKT: 150000, CPK: 110000, PLM: 0,      BTG: 160000, SLO: 210000, NGW: 270000, SBY: 420000 },
+    //     BTG: { JKT: 310000, CPK: 270000, PLM: 160000, BTG: 0,      SLO: 50000,  NGW: 110000, SBY: 260000 },
+    //     SLO: { JKT: 360000, CPK: 320000, PLM: 210000, BTG: 50000,  SLO: 0,      NGW: 60000,  SBY: 210000 },
+    //     NGW: { JKT: 420000, CPK: 380000, PLM: 270000, BTG: 110000, SLO: 60000,  NGW: 0,      SBY: 150000 },
+    //     SBY: { JKT: 570000, CPK: 530000, PLM: 420000, BTG: 260000, SLO: 210000, NGW: 150000, SBY: 0}
+    // };
+
+    // const tarifTolTruk = {
+    //     JKT: { JKT: 0,      CPK: 50000,  PLM: 180000, BTG: 370000, SLO: 425000, NGW: 495000, SBY: 655000 },
+    //     CPK: { JKT: 50000,  CPK: 0,      PLM: 130000, BTG: 320000, SLO: 375000, NGW: 445000, SBY: 605000 },
+    //     PLM: { JKT: 180000, CPK: 130000, PLM: 0,      BTG: 190000, SLO: 245000, NGW: 315000, SBY: 475000 },
+    //     BTG: { JKT: 370000, CPK: 320000, PLM: 190000, BTG: 0,      SLO: 55000,  NGW: 125000, SBY: 285000 },
+    //     SLO: { JKT: 425000, CPK: 375000, PLM: 245000, BTG: 55000,  SLO: 0,      NGW: 70000,  SBY: 230000 },
+    //     NGW: { JKT: 495000, CPK: 445000, PLM: 315000, BTG: 125000, SLO: 70000,  NGW: 0,      SBY: 160000 },
+    //     SBY: { JKT: 655000, CPK: 605000, PLM: 475000, BTG: 285000, SLO: 230000, NGW: 160000, SBY: 0 }
+    // }
+
+    // function hitungTarif(masuk, keluar, kendaraan) {
+    //     // console.log(kendaraan, 'kendaraan \n', masuk, 'tol masuk \n', keluar, 'tol keluar')
+    //     const tarifTol = kendaraan === 'Mobil' ? tarifTolMobil : (kendaraan === 'Bus' ? tarifTolBus : tarifTolTruk);
+    //     console.log(tarifTol[masuk], tarifTol[masuk][keluar], 'tarifTol')
+        
+    //     if (tarifTol[masuk][keluar]) {
+    //         const tarif = tarifTol[masuk][keluar].toLocaleString('id-ID');
+    //         return `Tarif tol dari ${masuk} ke ${keluar} untuk kendaraan ${kendaraan} adalah Rp.${tarif}`;
+    //     }else{
+    //         return "Terjadi kesalahan ketika mengisi"
+    //     }
+    // }
+
+    let inputKendaraan = prompt('Selamat Datang Di Aplikasi Cek Tarif Tol\nTolong masukan jenis kendaraan Anda:\n1. Mobil\n2. Bus\n3. Truk');
+    let inputMasukTol = prompt('Dari mana Anda masuk tol?\n1. Jakarta\n2. Cikampek\n3. Palimanan\n4. Batang\n5. Solo\n6. Ngawi\n7. Surabaya');
+    let inputKeluarTol = prompt('Ke mana Anda keluar tol?\n1. Jakarta\n2. Cikampek\n3. Palimanan\n4. Batang\n5. Solo\n6. Ngawi\n7. Surabaya');
+
+    let jenisKendaraan = "";
+    inputKendaraan = inputKendaraan.toLowerCase()
+    // console.log(inputKendaraan, 'inputKendaraan')
+    if(inputKendaraan == 1 || inputKendaraan == "mobil") {
+        jenisKendaraan = "Mobil"
+    } else if(inputKendaraan == 2 || inputKendaraan == "bus") {
+        jenisKendaraan = "Bus"
+    } else if(inputKendaraan == 3 || inputKendaraan == "truk") {
+        jenisKendaraan = "Truk"
+    } else {
+        alert("Jenis kendaraan tidak diketahui")
+    }   
+
+    let pilihanMasukTol = "";
+    inputMasukTol = inputMasukTol.toLocaleLowerCase()
+    if(inputMasukTol == 1 || inputMasukTol == 'jakarta'){
+        pilihanMasukTol = "JKT"
+    }else if(inputMasukTol == 2 || inputMasukTol == 'cikampek'){
+        pilihanMasukTol = "CPK"
+    }else if(inputMasukTol == 3 || inputMasukTol == 'palimanan'){
+        pilihanMasukTol = "PLM"
+    }else if(inputMasukTol == 4 || inputMasukTol == 'batang'){
+        pilihanMasukTol = "BTG"
+    }else if(inputMasukTol == 5 || inputMasukTol == 'solo'){
+        pilihanMasukTol = "SLO"
+    }else if(inputMasukTol == 6 || inputMasukTol == 'ngawi'){
+        pilihanMasukTol = "NGW"
+    }else if(inputMasukTol == 7 || inputMasukTol == 'surabaya'){
+        pilihanMasukTol = "SBY"
+    }else{
+        alert("Tol masuk tidak diketahui!")
+    }
+
+    let pilihanKeluarTol = "";
+    inputKeluarTol = inputKeluarTol.toLocaleLowerCase()
+    if(inputKeluarTol == 1 || inputKeluarTol == 'jakarta'){
+        pilihanKeluarTol = "JKT"
+    }else if(inputKeluarTol == 2 || inputKeluarTol == 'cikampek'){
+        pilihanKeluarTol = "CPK"
+    }else if(inputKeluarTol == 3 || inputKeluarTol == 'palimanan'){
+        pilihanKeluarTol = "PLM"
+    }else if(inputKeluarTol == 4 || inputKeluarTol == 'batang'){
+        pilihanKeluarTol = "BTG"
+    }else if(inputKeluarTol == 5 || inputKeluarTol == 'solo'){
+        pilihanKeluarTol = "SLO"
+    }else if(inputKeluarTol == 6 || inputKeluarTol == 'ngawi'){
+        pilihanKeluarTol = "NGW"
+    }else if(inputKeluarTol == 7 || inputKeluarTol == 'surabaya'){
+        pilihanKeluarTol = "SBY"
+    }else{
+        alert("Tol tujuan tidak diketahui!")
+    }
+
+    const hasilTarif = hitungTarif(pilihanMasukTol, pilihanKeluarTol, jenisKendaraan);
+    alert(hasilTarif);
+
+</script>

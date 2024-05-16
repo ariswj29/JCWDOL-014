@@ -1,0 +1,395 @@
+########## SECTION-01 ##########
+1. Sebutkan macam-macam comparison operator dan logical operator!
+Jawaban:
+    Comparison Operator: <=, <, ==, !=, >=, >
+    Logical Operator: &&, ||, !
+
+2. Apakah perbedaan antara AND, OR dan juga NOT?
+Jawaban:
+    Perbedaan antara AND, OR dan NOT adalah: 
+    - Jika AND maka kedua perbandingan harus bernilai benar semuanya
+    - Jika OR maka tidak harus bernilai benar semuanya, ada salah satu nilai yang benar maka tetap berfungsi
+    - Jika NOT bukan termasuk perbandingan, tetapi dia merubah suatu nilai menjadi sebaliknya
+
+3. Perhatikan code berikut! Apa yang akan terjadi apabila program berikut dijalankan?
+/*
+    function GetArr(arr){ 
+        return arr.forEach(value => {
+            return value
+        })
+    } 
+    function GetValue(arr){ 
+        return arr.map(value => {
+            return value
+        })
+    }
+    let arr = ["A", null, true, undefined, 20]
+    console.log(GetArr(arr))
+    console.log(GetValue(arr))
+*/
+Jawaban:
+    - Console log function GetArr akan muncul error, karena setauku forEach tidak bisa langsung return
+    - Console log function GetValue akan berjalan lancar dengan menampilkan data array dari variable arr
+
+4. Sebutkan perbedaan variable yang di declare dengan menggunakan syntax var, let dan juga const!
+Jawaban:
+    - Var bisa digunakan jika nama variable nya sama
+    - Let tidak bisa digunakan jika nama variable nya sama
+    - Const tidak bisa untuk merubah value 
+
+5. Sebutkan perbedaan antara looping while, do while dan juga for loop!
+Jawaban:
+    - Looping For Loop harus mempunyai 3 iterasi
+    - Looping While tidak bisa berjalan ketika kondisi yang akan dilakukan tidak benar
+    - Looping Do While bisa berjalan melakukan aksi tanpa harus menunggu hasil dari kondisi tersebut
+
+6. Sebutkan 5 build in method yang ada di Javascript!
+Jawaban:
+    - Array (contoh: .push, .unshift, .shift, .pop )
+    - String (contoh: .toUpperCase, .toLowerCase)
+    - Date (contoh: .now)
+    - Object (contoh: .keys, .values)
+    - Math (contoh: .random, .floor)
+
+7. Perhatikan code berikut! Apakah hasil console.log program di bawah ini?
+/*
+    var name = "Defryan"
+    let newName = name
+    newName = "Ryan"
+    console.log(name) Defryan
+    console.log(newName)  Ryan
+*/
+Jawaban:
+    console.log(name) hasilnya Defryan karena console dari variable name 
+    console.log(newName) hasilnya Ryan karena di baris ke 3 valuenya diubah
+
+8. Sebutkan perbedaan antara mutable dan immutable! 
+Jawaban:
+    - Mutable adalah type variable yang bisa berubah, biasa digunakan oleh type data non primitive (array, objet)
+    - Immutable kebalikan dari mutable, tidak bisa berubah, dan biasa digunakan oleh type data primitive (string, number, dll) 
+
+9. Sebutkan 3 contoh truthy dan falsy Javascript!
+Jawaban:
+    true = truthy
+    false = falsy
+    "" = false
+
+10. Perhatikan code berikut ini! Tuliskan dalam bentuk ternary operator!
+/*
+    if(10 !== "10"){
+        return 10
+    }else if(10 !== 10){
+        return "10"
+    }else{
+        return 10
+    }
+
+*/
+Jawaban:
+    10 != "10" ? 10 : (10 !== 10 ? "10" : 10) 
+
+11. Sebutkan perbedaan break dan juga continue!
+Jawaban:
+    - Break fungsinya untuk berhentikan aksi dari loop
+    - Continue fungsinya untuk melanjutkan loop dari aksi sebelumnya 
+
+12. Sebutkan perbedaan method push, unshift, shift dan juga pop!
+Jawaban:
+    Push = Menambahkan value di index terakhir
+    Unshift = Menambahkan value di index pertama
+    Shift = Menghilangkan value di index pertama
+    Pop = Menghilangkan value di index terakhir
+
+13. Perhatikan code berikut! Manakah penadeklarasian variable yang tidak sesuai
+    dengan aturan JS? 
+/*
+        let $tudentLists = ["Rafli", "Dhito", "Vero"] 
+        var KampusPWD = "Bsd, Jkt, Btm" 
+        const _e_commerce = null 
+        let programmingLanguage = { Javascript, PHP, Java } False
+        var comp4ny = "Bithealth, Tokopedia, Werkdone" 
+*/
+Jawaban:
+    let programmingLanguage karena type data object harus mempunyai key dan value
+
+14. Sebutkan macam-macam data structure dan juga cara kerjanya!
+Jawaban:
+    - Stack
+    - Queue
+    - Hastable
+    - LinkedList
+
+15. Apakah perbedaan antara forEach, .map dan juga .filter?
+Jawaban:
+    - forEach untuk melooping data seperti looping biasa tetapi mempunyai dua parameter index dan value
+    - .map sama seperti forEach, tetapi .map bisa diinialisasikan terlebih dahulu menjadi variable
+    - .filter hampir mirip seperti .map, tetapi .filter bisa menambahkan pengkondisian di looping tersebut 
+
+16. Jelaskan secara singkat proses synchronous dan asynchronous!
+Jawaban: -
+
+17. Apa itu hoisting?
+Jawaban:
+    Untuk menyimpan dan mengakses sebuah data atau website di sebuah internet
+
+18. Buatlah contoh program dengan menggunakan indirect callback function!
+Jawaban: -
+
+19. Perhatikan data berikut! Tuliskan syntax yang tepat untuk menambahkan
+    buah "Pear" dan menghapus buah "Apel" menggunakan method splice!
+Jawaban:
+    let fruits = ["Apel", "Jeruk",];
+    fruits.splice(1, 0, "Pear");
+    fruits.splice(0, 1);
+
+20. Sebutkan macam-macam tipe data primitive dan non primitive!
+Jawaban:
+    - Primitive = String, Number, Boolean, Undefined, Null
+    - Non Primitive = Array, Object 
+
+
+########## SECTION-02 ##########
+1. Perhatikan code berikut!
+/*
+        const dataSiswa = {
+            name: "Amel",
+            umur: 22,
+            noHp: [08123598733, "08523345976"]
+        }
+        console.log(dataSiswa.name)
+        console.log(dataSiswa.nohp)
+*/
+Hasil dari perintah console.log diatas adalah?
+x. Amel and 'ReferenceError: key nohp is not defined'
+b. Amel and null
+c. Amel and undefined 
+d. Amel and 'TypeError: nohp is not property'
+
+2. Apakah perbedaan antara syntax let dan const?
+a. Value dari variable let tidak dapat diubah, sedangkan const dapat diubah
+b. Variable let memiliki aturan scope, sedangkan const tidak memiliki aturan scope
+c. Variable const dapat diduplicate, sedangkan let tidak dapat di duplicate
+x. Value dari variable const tidak dapat diubah, sedangkan let dapat diubah 
+
+3. Hasil console.log(typeof null) dan juga console.log(typeof 2302) adalah?
+a. string & number
+b. number & number
+x. object & number
+d. null & number
+
+4. Perhatikan code berikut!
+/*
+        let std = "GBK"
+        std += " JKT"
+        std = "GBT SBY"
+        console.log(std)
+*/
+a. "GBK"
+b. " JKT"
+x. "GBT SBY"
+d. "GBK JKT"
+
+5. Perbedaan dari .forEach dengan .map adalah?
+a. forEach tidak menghasilkan array baru, sedangkan map menghasilkan array baru
+b. Looping forEach dapat dihentikan dengan syntax break, sedangkan looping map
+   dapat dihentikan dengan syntax return
+c. Looping map digunakan untuk me-looping saja, sedangkan looping forEach digunakan
+   untuk mendapatkan output berupa array baru
+x. Semua jawaban salah
+
+6. Pendeklarasian yang sesuai dengan aturan JS adalah?
+a. const password = @abc123#
+x. let school_Name = "Purwadhika"
+c. var Object = { name: "Andien" }
+d. let nama-depan = "Budi"
+
+7. Data structure yang menggunakan konsep FIFO adalah?
+a. Stack // LIFO
+x. Queue
+c. Linkedlist
+d. Hashmap
+
+8. Bagaimana cara untuk mengakses property output pada data berikut ini?
+/*
+        const data = [
+            null, () => [{ output: 'Hai, aku disini!' }], 100, undefined, true
+        ]
+*/
+a. data[1]()[0]['output']
+b. data[1][0].output
+x. data[1]().output
+d. data[1]()=>[0].output
+
+
+
+9. Perhatikan program berikut ini!
+/*
+        let discount = 75
+        discount *= 1 
+        discount++
+        discount += '1' 
+*/
+Hasil console.log(discount) adalah?
+a. 7521
+x. 761
+c. 77
+d. 751
+
+10. Perhatikan looping berikut!
+/*
+        do{
+            let poin = 77
+            poin+=1
+            console.log(poin)
+            poin--
+        }while(poin <= 80)
+*/
+Apakah kesalahan pada program di atas?
+a. Kondisi step pada exit way tidak bisa menggunakan += 1
+b. Terjadi infinite loop karena poin--
+c. Kesalahan pada penamaan variable
+x. Variable poin tidak dapat digunakan di dalam while condition
+
+11. Perhatikan syntax berikut!
+/*
+        let noAntrian = [11, 13, 15, 12, 14]
+        noAntrian.push(12) 
+        noAntrian.sort() 
+        noAntrian.pop() 
+*/
+Hasil akhir dari noAntrian adalah?
+x. [11, 12, 12, 13, 14]
+b. [12, 12, 13, 14, 15]
+c. [11, 13, 15, 12, 14]
+d. [11, 12, 13, 14, 15]
+
+12. Perhatikan syntax berikut ini!
+/*
+        function cetakTiket(tiket, callback){
+            return callback(tiket)
+        }
+        cetakTiket('Kereta', Print)
+*/
+Apakah yang akan terjadi apabila program diatas dijalankan?
+x. TypeError: callback is not a function
+b. ReferenceError: Callback is not defined
+c. 'Kereta'
+d. Semua jawaban salah
+
+13. Berikut ini pernyataan yang tidak tepat mengenai tipe data array adalah?
+x. Memiliki property .length saja
+b. Menampung semua tipe data termasuk array itu sendiri
+c. Masing-masing data memiliki index penomoran
+d. Dapat menampung object dan juga function
+
+
+
+14. Hasil dari console.log(String(2302) === "2302") adalah?
+x. True
+b. False
+c. ReferenceError
+d. TypeError
+
+15. Perhatikan code berikut!
+/*
+        let printKuy = "Selamat"
+        if("0" !== "nol"){ 
+            printKuy += " Apa Hayo?"
+        }
+*/
+Hasil dari console.log(printKuy) di akhir program adalah?
+a. " Apa Hayo?"
+b. "Selamat"
+x. "Selamat Apa Hayo?"
+d. "Selamat Apa Hayo"
+
+16. Perhatikan function berikut!
+/*
+        let UppercaseStr = (txt) => {
+            let text = txt
+            return text
+        }
+        UppercaseStr("Ya")
+        console.log(text)
+*/
+
+Apa hasil dari console.log program diatas?
+a. Undefined
+b. Ya
+x. ReferenceError: text is not defined
+d. Null
+
+17. Perhatikan code berikut!
+/*
+    let kelas = '2302JCWD'
+    kelas = Number(kelas)
+    kelas = String(kelas)        
+*/
+Apakah hasil dari console.log(kelas) di baris akhir dan apa type of dari kelas?
+a. Null & String
+x. NaN & String
+c. 2302 & String
+d. 2302 & Number
+
+18. let clothing = ["Erigo", "Wadezig", "UNKL347"]
+    clothing.splice(2, 0, "Reclays", "Screamous") // [Erigo, Wadezig, Reclays, Screamous, UNKL347]
+    clothing.shift() // [Wadezig, Reclays, Screamous, UNKL347]
+    console.log(clothing)
+
+Hasil dari console.log diatas yaitu?
+a. ["Wadezig", "UNKL347", "Reclays", "Screamous"]
+b. ["Erigo", "Wadezig", "UNKL347", "Reclays"]
+x. ["Wadezig", "Reclays", "Screamous", "UNKL347"]
+d. ["Erigo", "Wadezig", "UNKL347", "Reclays"]
+
+19. Perhatikan program berikut!
+/*
+        let klub = "Persib"
+        let std = "GBLA"
+        if(!klub && !std){ 
+            console.log("Data Tidak Lengkap")
+        }else if(klub && !std){ 
+            console.log("Data Kurang Lengkap")
+        }else if(!klub && std){ 
+            console.log("Data Masih Kurang Lengkap")
+        }else{
+            console.log("Data Lengkap")
+        }
+*/
+Hasil dari program diatas adalah?
+a. Data Tidak Lengkap
+b. Data Kurang Lengkap
+c. Data Masih Kurang Lengkap
+x. Data Lengkap
+
+20. Berikut ini syntax yang dapat dilakukan hoisting yaitu?
+x. var & let myFunct = function(){ ... }
+b. let & function NewFunction(){ ... }
+c. const & const createFunction = () => { ... }
+d. var & var ourFunction = () => { ... }
+
+21. Hasil dari kedua console.log berikut adalah?
+/*
+let random = '90D'
+random = parseInt(random)
+console.log(random)
+random = String(random)
+console.log(typeof random)
+*/
+a. NaN & Object 
+b. 90 & Number 
+x. NaN & String 
+d. 90 & String 
+
+22. Hasil dari kedua console.log berikut adalah?
+/*
+let random = 'D90'
+random = Number(random)
+console.log(random)
+random = String(random)
+console.log(typeof random)
+*/
+a. NaN & Object 
+b. 90 & Number 
+x. NaN & String 
+d. 90 & String 
