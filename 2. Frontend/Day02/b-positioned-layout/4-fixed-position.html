@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Fixed position is a close cousin to absolute positioning. The main difference is that it's even more rebellious: it can only be contained by the viewport. It doesn't care about containing blocks.
+  
+  The main advantage of fixed-position elements is that they're immune to scrolling.
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Position</title>
+    <style>
+      html,
+      body {
+        height: 500vh;
+      }
+
+      .help-btn {
+        position: fixed;
+        right: 32px;
+        bottom: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="help-btn">Help</button>
+  </body>
+</html>

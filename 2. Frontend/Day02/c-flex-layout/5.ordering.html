@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Order</title>
+    <style>
+      main {
+        display: flex;
+        gap: 10px;
+      }
+
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+        color: white;
+        font-size: 2rem;
+      }
+
+      article:nth-child(1) {
+        order: 3;
+      }
+
+      article:nth-child(2) {
+        order: 2;
+      }
+
+      article:nth-child(3) {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>1</article>
+      <article>2</article>
+      <article>3</article>
+    </main>
+  </body>
+</html>

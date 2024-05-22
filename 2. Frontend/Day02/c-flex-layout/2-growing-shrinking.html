@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Growing and Shrinking</title>
+    <style>
+      #grow,
+      #shrink {
+        margin-bottom: 20px;
+        display: flex;
+      }
+
+      #grow {
+        width: 100%;
+        height: 100px;
+      }
+
+      #shrink {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        border: 5px solid red;
+      }
+
+      #shrink div {
+        width: 100px;
+      }
+
+      #grow div:nth-of-type(1) {
+        flex-grow: 1;
+      }
+      #grow div:nth-of-type(2) {
+        flex-grow: 2;
+      }
+      #grow div:nth-of-type(3) {
+        flex-grow: 1;
+      }
+      #grow div:nth-of-type(4) {
+        flex-grow: 1;
+      }
+      #grow div:nth-of-type(5) {
+        flex-grow: 1;
+      }
+
+      #shrink div:nth-of-type(1) {
+        flex-shrink: 10;
+      }
+      #shrink div:nth-of-type(2) {
+        flex-shrink: 1;
+      }
+      #shrink div:nth-of-type(3) {
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grow">
+      <div style="background-color: coral"></div>
+      <div style="background-color: lightblue"></div>
+      <div style="background-color: khaki"></div>
+      <div style="background-color: pink"></div>
+      <div style="background-color: lightgrey"></div>
+    </div>
+    <div id="shrink">
+      <div style="border: 1px solid coral">I'll shrinking.</div>
+      <div style="border: 1px solid coral">I won't</div>
+      <div style="border: 1px solid coral">I won't</div>
+    </div>
+  </body>
+</html>

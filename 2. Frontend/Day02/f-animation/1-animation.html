@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .planet,
+      .moon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+
+      .planet {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        background: dodgerblue;
+      }
+
+      .moon {
+        width: 20px;
+        height: 20px;
+        background: silver;
+        border-radius: 50%;
+        animation: orbit 6000ms linear infinite;
+      }
+
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(150px);
+        }
+        to {
+          transform: rotate(360deg) translateX(150px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="planet"></div>
+      <div class="moon"></div>
+    </div>
+  </body>
+</html>

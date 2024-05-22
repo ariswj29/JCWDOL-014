@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- if we want to take an element out of this orderly flow, and stick it wherever we want, we can use absolute positioning. 
+  
+  We generally use absolute positioning for things like:
+    1. UI elements that need to float above the UI, like tooltips or dropdowns.
+    2. Decorative elements that need to be stuck in certain positions (eg. abstract illustrations).
+    3. Stacking multiple elements in the same place, like a deck of cards.
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute Position</title>
+    <style>
+      .pink.box {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 75px;
+        height: 90px;
+        background: deeppink;
+      }
+
+      .center-box {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pink box"></div>
+    <p>Hello World</p>
+    <hr />
+    <div class="center-box"></div>
+  </body>
+</html>

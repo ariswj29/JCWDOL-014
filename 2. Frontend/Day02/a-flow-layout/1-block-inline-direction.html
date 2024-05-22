@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Directions</title>
+  </head>
+  <body>
+    <main>
+      <section id="inline">
+        <!-- Inline direction. Like people standing in line, side by side. 
+        1. Occupy only the space they need.
+        2. Can't set width and height.
+        3. Can't set margin top and bottom.
+        4. Padding bottom and top will be ignored.
+        5. They don't force break lines.
+        6. Inline element cannot contain block elements (it will break the layout).
+
+        Some inline elements are:
+        <a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><var>
+        -->
+        <span>Span</span>
+        <a href="">Link</a>
+        <strong>Strong</strong>
+        <em>Emphasis</em>
+        <img
+          src="https://images.unsplash.com/photo-1715630914630-145eff95062b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="European likes building."
+          width="50px"
+        />
+        <time>10:00</time>
+        <abbr title="World Health Organization">WHO</abbr>
+      </section>
+      <hr />
+      <section id="block">
+        <!-- Block direction. Similar to stack of lego bricks, they stack on top of each other. 
+        1. Occupy the entire width available.
+        2. Can set width and height.
+        3. Can set margin/padding/border top and bottom.
+        4. They force break lines.
+        5. Block element can contain inline elements.
+
+        Some block elements are:
+        <address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+        -->
+        <h1>Heading</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint qui
+          sequi corrupti. Blanditiis, eveniet nulla laudantium consequuntur ad,
+          quisquam vero dignissimos aspernatur optio facilis officia ipsum quos
+          in facere dolore.
+        </p>
+        <button>Click me</button>
+        <div>Division Tag</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+            </tr>
+            <tr>
+              <td>Data 4</td>
+              <td>Data 5</td>
+              <td>Data 6</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <hr />
+      <section id="inline-block">
+        <!-- Inline-block direction. Rarely used, it make an element become inline but still preserve their block capabilities such as setting width, height, top and bottom margins/paddings, etc. 
+      
+        There is no default inline-block element, we make it using display property in CSS `display: inline-block;`.
+        -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <span
+            style="
+              display: inline-block;
+              border: 1px solid blue;
+              margin: 10px;
+              padding: 10px;
+            "
+            >Span block.</span
+          >
+          Pariatur fugiat quod ex, eius repudiandae ipsa rem dignissimos
+          corporis quaerat iusto incidunt eligendi exercitationem architecto
+          quas quam? Placeat cupiditate adipisci odio.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

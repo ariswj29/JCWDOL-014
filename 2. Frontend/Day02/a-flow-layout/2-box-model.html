@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- The four aspects that make up the box model are:
+      1. Content
+      2. Padding
+      3. Border
+      4. Margin
+
+      Box Sizing:
+      1. Content-box: Width and height property are applied only to the content area.
+      2. Border-box: Width and height property are applied to the content area, including padding and border.
+      -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <!-- CSS Reset -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- This box total width will not exactly be 100px -->
+      <div
+        style="
+          height: 100px;
+          width: 100px;
+          margin: 10px;
+          padding: 16px;
+          border: 1px solid;
+          background-color: mediumpurple;
+        "
+      ></div>
+
+      <!-- This box total width will exactly be 100px -->
+      <div
+        style="
+          box-sizing: border-box;
+          height: 100px;
+          width: 100px;
+          margin: 10px;
+          padding: 16px;
+          border: 1px solid;
+          background-color: salmon;
+        "
+      ></div>
+    </main>
+  </body>
+</html>

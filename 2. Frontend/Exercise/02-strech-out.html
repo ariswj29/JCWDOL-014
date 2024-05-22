@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stretched Content</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #222;
+        font-family: Poppins, sans-serif;
+      }
+
+      .card {
+        margin: 0 auto;
+        padding: 32px;
+        max-width: 500px;
+        border-radius: 8px;
+        background-color: white;
+      }
+
+      .stretch-out {
+        margin-right: -32px;
+        margin-left: -32px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      p,
+      img {
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p>
+        Otters have long, slim bodies and relatively short limbs. Their most
+        striking anatomical features are the powerful webbed feet used to swim,
+        and their seal-like abilities holding breath underwater.
+      </p>
+      <div class="stretch-out">
+        <img
+          alt="A cute otter in water"
+          src="https://courses.joshwcomeau.com/cfj-mats/otter.jpg"
+        />
+      </div>
+      <p>
+        More importantly, otters are glorious water dogs, playful and curious.
+        The otter, no other, is the best animal.
+      </p>
+    </div>
+  </body>
+</html>

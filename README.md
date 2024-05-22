@@ -7,3 +7,13 @@ Learn Fundamental
 - Day 06 : Full of Exercise about Day 01 - Day 04, Prompt and Alert in html
 - Day 07 : Object, Destructuring Assignment, Chaining Condition
 - Day 08 : Class Inheritance, ENCAPSULATION, Getter & Setter
+- Day 09 : Full of Exercise - Mini Project Student in Modal
+- Day 10 : Build in data structures (Array, Map, Object, Set), costum data structures (Linked List, Queue, Stack)
+- Day 11 : Full of Exercise - Mini Project price tol in modal
+- Day 12 : Async Await, Callback, Promise
+
+
+Learn Frontend
+- Day 01 : Intro to HTML, Section, Table, Form
+- Day 02 : Intro to CSS Style, Flow Layout, Positioned Layout, Intro Flex layout
+- Day 03 : DOM, Intro to react js, Install react js use vite, Code structure, Method import export, Components, Props

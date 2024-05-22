@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Logo</h1>
+      <nav>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.amazon.com">Amazon</a></li>
+            <li><a href="https://www.netflix.com">Netflix</a></li>
+            <li><a href="01-modal.html">Exercise Modal</a></li>
+        </ul>
+        </nav>
+    </header>
+    <hr />
+    <main>
+        <!-- Hero Section -->
+        <div>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1505533321630-975218a5f66f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="Hero Section" />
+                <figcaption>A beautiful sky</figcaption>
+            </figure>
+            <h2>Title</h2>
+            <p>20 May, 2024</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut magnam omnis, assumenda nam corporis explicabo harum, libero enim ducimus distinctio quas magni? Perferendis, magnam assumenda. Nesciunt aspernatur facilis distinctio modi?</p>
+        </div>
+
+        <!-- First Section -->
+        <div>
+            <h2>First Section</h2>
+            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> Ut magnam omnis, assumenda nam corporis explicabo harum, libero enim ducimus distinctio quas magni? Perferendis, magnam assumenda. Nesciunt aspernatur facilis distinctio modi?.</p>
+            <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</i> Ut magnam omnis, assumenda nam corporis explicabo harum, libero enim ducimus distinctio quas magni? Perferendis, magnam assumenda. Nesciunt aspernatur facilis distinctio modi?.</p>
+        </div>
+
+        <!-- Second Section -->
+        <div>
+            <h2>Second Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit, blanditiis consectetur nisi quas voluptatem illum illo dolores reiciendis cumque ad explicabo libero veniam rem omnis eum dolore nam a.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit, blanditiis consectetur nisi quas voluptatem illum illo dolores reiciendis cumque ad explicabo libero veniam rem omnis eum dolore nam a.
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit, blanditiis consectetur nisi quas voluptatem illum illo dolores reiciendis cumque ad explicabo libero veniam rem omnis eum dolore nam a.
+        </div>
+
+        <!-- Third Section -->
+        <div>
+            <h2>Third Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit, blanditiis consectetur nisi quas voluptatem illum illo dolores reiciendis cumque ad explicabo libero veniam rem omnis eum dolore nam a.
+            </p>
+
+            <ol>
+                <li>Uno</li>
+                <li>Dos</li>
+                <li>Tres</li>
+            </ol>
+            <table>
+                <tr>
+                    <th colspan="2">Header 1 & 2</th>
+                    <th>Header 3</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Row 1 and 2, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Fourth Section -->
+        <div>
+            <h2>Fourth Section</h2>
+            <form action="" method="POST">
+                <fieldset>
+                    <legend>Identity</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" />
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" />
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <label for="rating">Give your rating:</label>
+                    <select name="rating" id="rating">
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Star</option>
+                        <option value="3">3 Star</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Are you satisfied?</legend>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="satisfaction" value="yes" />
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="satisfaction" value="no" />
+                </fieldset>
+                <fieldset>
+                    <legend>What we can improve?</legend>
+                    <input type="checkbox" id="topic" name="topic" />
+                    <label for="topic">Topic</label>
+                    <input type="checkbox" id="writing" name="writing" />
+                    <label for="writing">Writing</label>
+                    <input type="checkbox" id="design" name="design" />
+                    <label for="design">Design</label>
+                    <input type="checkbox" id="image" name="image" />
+                    <label for="image">Image</label>
+                </fieldset>
+                <button style="margin-top: 10px;" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <hr />
+    <footer>
+      <p>&copy; 2024</p>
+    </footer>
+  </body>
+</html>
