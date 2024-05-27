@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Global Styles */
+body {
+  padding: 24px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+}
+
+header,
+main,
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* MAIN CSS */
+
+/* #hero {
+  display: flex;
+  align-items: stretch;
+  gap: 72px;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+--- Text Block 
+#content-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 96px;
+}
+
+#content-left h1 {
+  margin-bottom: 48px;
+  color: hsl(0, 0%, 8%);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#content-left p {
+  margin-bottom: 32px;
+  max-width: 80%;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#content-left button {
+  margin-bottom: 108px;
+  padding: 16px 24px;
+  width: fit-content;
+  background-color: hsl(0, 0%, 8%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+#clients {
+  display: flex;
+  gap: 32px;
+  max-width: 15%;
+}
+
+#clients img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+--- Image Block
+#content-right {
+  width: 450px;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+}
+
+#content-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
