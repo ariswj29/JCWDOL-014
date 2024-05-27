@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- 
+  1. Intro to DOM
+  2. Accessing and targeting DOM
+    - getElementById
+    - getElementsByClassName
+    - getElementsByTagName
+    - querySelector
+    - querySelectorAll
+  3. Create a new element
+    - createElement
+    - textContent
+    - innerText
+    - innerHTML
+    - insertBefore
+    - appendChild
+  4. Remove an element
+    - remove
+    - removeChild
+  5. Update an element
+    - style
+    - modified style properties
+      - backgroundColor
+      - color
+      - fontSize
+      - fontWeight
+    - setAttribute
+    - add class name
+    - remove class name
+    - toggle class name
+  6. Update based on user input using event listener
+ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>DOM</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+      .heading {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="section-1">
+        <h1>DOM</h1>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minus
+          aliquam voluptatum ab facilis, reiciendis atque accusantium! Amet quae
+          aut architecto. Et adipisci commodi dicta quidem in quo praesentium
+          ipsum.
+        </p>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum,
+          exercitationem velit quo, cum minima quidem voluptatem labore esse
+          architecto alias ea porro sapiente soluta, est suscipit quisquam? Ex,
+          quos deleniti. Voluptatem repellat dolore soluta nostrum, quisquam
+          excepturi assumenda ratione debitis perspiciatis! Id mollitia placeat
+          sint, asperiores impedit porro a minus, fuga veritatis nesciunt
+          recusandae, quam laboriosam quisquam incidunt itaque doloribus.
+        </p>
+        <ol>
+          <li>Unos</li>
+          <li>Dos</li>
+          <li>Tres</li>
+        </ol>
+      </section>
+      <button id="btn">I am a button</button>
+    </main>
+    <script>
+      /* Accessing and targeting DOM */
+      console.log(document);
+      console.dir(document);
+
+      const button = document.getElementById("btn");
+      console.log(button);
+      console.dir(button);
+
+      const paragraphs = document.getElementsByClassName("paragraph");
+      console.log(paragraphs);
+      console.log(paragraphs[0]);
+      console.dir(paragraphs);
+      console.dir(paragraphs[0]);
+
+      const liTags = document.getElementsByTagName("li");
+      console.log(liTags);
+
+      const paragraph = document.querySelector(".paragraph");
+      console.log(paragraph);
+
+      const allParagraphs = document.querySelectorAll(".paragraph");
+      console.log(allParagraphs[0]);
+
+      /* Create a new element */
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent =
+        "I am a new paragraph artifically created using the DOM.";
+      // document.body.appendChild(newParagraph);
+      // document.body.insertBefore(newParagraph, button);
+      document.getElementById("section-1").appendChild(newParagraph);
+
+      const newSection = document.createElement("section");
+      newSection.innerHTML = "<h2>I am a new section</h2>";
+      document.getElementsByTagName("main")[0].insertBefore(newSection, button);
+
+      /* Remove an element */
+      // document.getElementById("btn").remove();
+      // document.getElementById("section-1").removeChild(newParagraph);
+
+      /* Update an element */
+      const h1 = document.querySelector("h1");
+      console.log(h1.style);
+      h1.style.backgroundColor = "red";
+      h1.style.color = "white";
+      h1.style.fontSize = "2rem";
+      h1.style.fontWeight = "100";
+
+      newSection.setAttribute("id", "section-2");
+      console.log(newSection.getAttribute("id"));
+      newSection.removeAttribute("id");
+
+      // h1.classList.add("heading");
+      // h1.classList.remove("heading");
+      // h1.classList.toggle("heading");
+
+      /* Update based on user input using event listener */
+      button.addEventListener("click", function () {
+        console.log("Button clicked");
+        h1.innerText = "I am Changing!";
+        h1.classList.toggle("heading");
+      });
+
+      h1.addEventListener("mouseover", function () {
+        h1.style.backgroundColor = "blue";
+      });
+
+      h1.addEventListener("mouseout", function () {
+        h1.style.backgroundColor = "red";
+      });
+    </script>
+  </body>
+</html>
