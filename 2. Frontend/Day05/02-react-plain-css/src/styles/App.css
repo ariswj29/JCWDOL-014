@@ -1,0 +1,36 @@
+#root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .logo {
+    margin-bottom: 32px;
+    animation: infinite 5s linear logo-animation;
+  }
+  
+  .title {
+    margin-bottom: 16px;
+  }
+  
+  @keyframes logo-animation {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+  
+    50% {
+      transform: rotate(180deg) scale(1.5);
+    }
+  
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }

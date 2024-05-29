@@ -18,3 +18,4 @@ Learn Frontend
 - Day 02 : Intro to CSS Style, Flow Layout, Positioned Layout, Intro Flex layout
 - Day 03 : DOM, Intro to react js, Install react js use vite, Code structure, Method import export, Components, Props
 - Day 04 : Make landing page, Intro to Tailwind, Intro to Chakra UI
+- Day 05 : CSS Grid Review, React Plain CSS, React Styled Component, React Router
