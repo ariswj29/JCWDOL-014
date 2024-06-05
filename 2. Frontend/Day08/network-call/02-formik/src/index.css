@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}

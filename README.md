@@ -19,4 +19,8 @@ Learn Frontend
 - Day 03 : DOM, Intro to react js, Install react js use vite, Code structure, Method import export, Components, Props
 - Day 04 : Make landing page, Intro to Tailwind, Intro to Chakra UI
 - Day 05 : CSS Grid Review, React Plain CSS, React Styled Component, React Router
-- Day 06 : How to use UseState, UseEffect, UseCounter, Fetching Data
+- Day 06 : How to use useState, useEffect, useCounter, Fetching Data
+- Day 07 : How to use Props, useReducer, useContext, useDispatch (redux)
+- Day 08 : Intro Network Call, JSON Server, Formik
+- Day 09 : Intro to Redux, Redux Toolkit, React Redux
+- Day 10 : Intro to NextJS, Layout and Page
