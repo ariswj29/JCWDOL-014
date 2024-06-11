@@ -24,3 +24,8 @@ Learn Frontend
 - Day 08 : Intro Network Call, JSON Server, Formik
 - Day 09 : Intro to Redux, Redux Toolkit, React Redux
 - Day 10 : Intro to NextJS, Layout and Page
+- Day 11 : NextJS page id / slug, error page, not found page
+- Day 12 : Intro to Headless CMS, fetching data Headless CMS to NextJS
+
+
+- Additional Class : Configuration tailwind css with nextJs, Responsive page using tailwind css 
