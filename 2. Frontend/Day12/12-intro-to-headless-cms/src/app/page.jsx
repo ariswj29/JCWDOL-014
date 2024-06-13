@@ -1,30 +1,25 @@
-import Image from "next/image";
-import { createClient } from "contentful";
 import RecipeCard from "@/components/RecipeCard";
+import { contentfulClient } from "@/helpers/contentful-client";
+import { createClient } from "contentful";
 
-async function getReceipt(){
-  try{
-    const client = createClient({
-      space: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    });
-
+async function getRecipes() {
+  try {
+    const client = contentfulClient();
     const res = await client.getEntries({ content_type: "recipe" });
-    const response = await client.getEntries({ content_type: "userCooking" });
-    console.log(response.items);
     return res.items;
-  }catch(error){
+  } catch (error) {
     console.error(error);
   }
 }
 
 export default async function Home() {
-  const recipes = await getReceipt();
+  const recipes = await getRecipes();
+
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <section className="flex flex-wrap gap-8 gap-y-20">
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}
-    </div>
+    </section>
   );
 }
