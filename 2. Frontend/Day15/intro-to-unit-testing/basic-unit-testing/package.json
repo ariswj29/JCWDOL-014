@@ -1,0 +1,17 @@
+{
+  "name": "intro-to-unit-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.0",
+    "vitest": "^1.6.0"
+  }
+}

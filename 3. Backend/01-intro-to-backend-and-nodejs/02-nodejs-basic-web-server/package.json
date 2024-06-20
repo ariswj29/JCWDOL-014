@@ -1,0 +1,20 @@
+{
+  "name": "02-nodejs-basic-web-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.3",
+    "typescript": "^5.4.5"
+  }
+}

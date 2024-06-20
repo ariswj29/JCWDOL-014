@@ -29,5 +29,11 @@ Learn Frontend
 - Day 12 : Intro to Headless CMS, fetching data Headless CMS to NextJS
 - Day 13 : Exercise Fetching data using Headless CMS, and detail data
 - Day 14 : Continue (Day 12) with stying responsive using tailwindcss, prettier tailwindcss
+- Day 15 : Intro to unit testing, basic component testing, basic unit testing
 
 - Additional Class : Configuration tailwind css with nextJs, Responsive page using tailwind css
+
+Learn Backend
+
+- Day 01 : Intro to TypeScript, Intro to NodeJS
+- Day 02 : Intro to ExpressJS, Express Routing, Express Middleware, Express Rest API
