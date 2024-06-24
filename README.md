@@ -37,3 +37,5 @@ Learn Backend
 
 - Day 01 : Intro to TypeScript, Intro to NodeJS
 - Day 02 : Intro to ExpressJS, Express Routing, Express Middleware, Express Rest API
+- Day 03 : Exercise Make Rest API & Folder Structur in ExpressJS
+- Day 04 : Intro using MySql Workbench, Make a basic query, Fetching data using MySql database

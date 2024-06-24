@@ -1,13 +1,13 @@
 import express, { NextFunction, Request, Response } from "express";
-import todoRouter from "./routes/todo-route.js";
+import expensesRouter from "./routes/expenses-route.js";
 
 const app = express();
 const PORT = 8000;
-const filePath = "./src/data/todos.json";
+const filePath = "./src/data/expenses.json";
 
 app.use(express.json());
 
-app.use("/api/v1/todos", todoRouter);
+app.use("/api/v1/expenses", expensesRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
