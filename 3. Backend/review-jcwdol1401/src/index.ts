@@ -1,9 +1,12 @@
 import express, { Application, Request, Response } from "express";
 import router from "./routers/index";
+import cors from "cors";
+import { configDotenv } from "dotenv";
 
 const app: Application = express();
 const PORT = 5670;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);

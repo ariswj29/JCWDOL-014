@@ -12,3 +12,7 @@ MVC: adalah sebuah arsitektur
 Model <
 View <-- route
 Controller <-- code bisnis proccess
+
+install axios dan cors (@types/cors) untuk get data dari backend
+
+install bcrypt buat enkripsi password

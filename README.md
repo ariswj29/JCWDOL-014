@@ -39,3 +39,9 @@ Learn Backend
 - Day 02 : Intro to ExpressJS, Express Routing, Express Middleware, Express Rest API
 - Day 03 : Exercise Make Rest API & Folder Structur in ExpressJS
 - Day 04 : Intro using MySql Workbench, Make a basic query, Fetching data using MySql database
+- Day 05 : Exercise about day 1 - day 4
+- Day 06 : How to Normalization database, Transaction rollback
+- Day 07 : Join Query in sql with (inner join, left join, right join, self join)
+- Day 08 : Intro to ORM using prisma
+- Day 09 : Review previous session with new lecturer
+- Day 10 : Review Authentication and Authorization, using JWT (jsonwebtoken), bcrypt for hashing password and cors

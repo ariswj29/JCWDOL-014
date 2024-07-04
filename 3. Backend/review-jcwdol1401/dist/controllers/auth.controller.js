@@ -9,8 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.login = exports.createUser = exports.getAllUsers = void 0;
+exports.login = exports.register = exports.getAllUsers = void 0;
 const client_1 = require("@prisma/client");
+const bcrypt_1 = require("bcrypt");
+const jsonwebtoken_1 = require("jsonwebtoken");
 const prisma = new client_1.PrismaClient();
 const getAllUsers = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -22,14 +24,24 @@ const getAllUsers = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
 });
 exports.getAllUsers = getAllUsers;
-const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email, password } = req.body;
+        const existingUser = yield prisma.user.findFirst({
+            where: {
+                email,
+            },
+        });
+        if (existingUser) {
+            return res.status(400).json({ error: "User already exists" });
+        }
+        const salt = yield (0, bcrypt_1.genSalt)(10);
+        const hashedPassword = yield (0, bcrypt_1.hash)(password, salt);
         const user = yield prisma.user.create({
             data: {
                 name,
                 email,
-                password,
+                password: hashedPassword,
             },
         });
         res.status(201).json({ message: "success", data: user });
@@ -38,23 +50,27 @@ const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         res.status(400).json({ error: "error" });
     }
 });
-exports.createUser = createUser;
+exports.register = register;
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, password } = req.body;
         const user = yield prisma.user.findFirst({
             where: {
                 email,
-                password,
             },
         });
         if (!user) {
-            return res.status(400).json({ error: "Invalid credentials" });
+            return res.status(400).json({ error: "Invalid email or password" });
         }
-        else {
-            res.status(200).json({ message: "success", data: user });
+        const invalidPassword = yield (0, bcrypt_1.compare)(password, user.password);
+        if (!invalidPassword) {
+            return res.status(400).json({ error: "Invalid email or password" });
         }
-        res.status(200).json({ message: "success", data: user });
+        const jwtPayload = { name: user.name, email: user.email, role: user === null || user === void 0 ? void 0 : user.role };
+        const token = yield (0, jsonwebtoken_1.sign)(jwtPayload, "mySecret", {
+            expiresIn: "1h",
+        });
+        res.status(200).json({ message: "success", data: user, token });
     }
     catch (error) {
         res.status(400).json({ error: "error" });

@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const blog_controller_1 = require("../controllers/blog.controller");
+const jwt_middleware_1 = require("../middleware/jwt.middleware");
 const router = (0, express_1.Router)();
-router.get("/", blog_controller_1.getAllBlogs);
-router.post("/", blog_controller_1.createBlog);
+router.get("/", jwt_middleware_1.verifyToken, blog_controller_1.getAllBlogs);
+router.post("/", jwt_middleware_1.verifyToken, jwt_middleware_1.adminGuard, blog_controller_1.createBlog);
 router.get("/:id", blog_controller_1.getBlogById);
 router.put("/:id", blog_controller_1.updateBlog);
 router.delete("/:id", blog_controller_1.deleteBlog);
